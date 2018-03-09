@@ -26,7 +26,7 @@ namespace Portunus
             string[] filelist = e.Data.GetData(DataFormats.FileDrop) as string[];
             for (int i = 0; i < filelist.Length; i++)
             {
-                //filelist.
+                string path = Path.GetFileName(filelist[i]);
             }
         }
 
