@@ -21,8 +21,10 @@ namespace Portunus
 
         private void OnDragEnter(object sender, DragEventArgs e)
         {
+            e.Effect = DragDropEffects.All;
             this.textBox1.Text = "Farts";
             this.pnlDropHere.Visible = true;
+            this.AllowDrop = false;
             string[] filelist = e.Data.GetData(DataFormats.FileDrop) as string[];
             for (int i = 0; i < filelist.Length; i++)
             {
@@ -32,13 +34,16 @@ namespace Portunus
 
         private void OnDragDrop(object sender, DragEventArgs e)
         {
-            string[] fileList = e.Data.GetData(DataFormats.FileDrop) as string[];
+            string[] fileList = e.Data.GetData(DataFormats.FileDrop, false) as string[];
+            this.pnlDropHere.Visible = false;
+            this.AllowDrop = true;
         }
 
         private void OnDragLeave(object sender, EventArgs e)
         {
             this.textBox1.Text = "";
             this.pnlDropHere.Visible = false;
+            this.AllowDrop = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -52,6 +52,9 @@
             this.pnlDropHere.Size = new System.Drawing.Size(260, 238);
             this.pnlDropHere.TabIndex = 1;
             this.pnlDropHere.Visible = false;
+            this.pnlDropHere.DragDrop += new System.Windows.Forms.DragEventHandler(this.OnDragDrop);
+            this.pnlDropHere.DragEnter += new System.Windows.Forms.DragEventHandler(this.OnDragEnter);
+            this.pnlDropHere.DragLeave += new System.EventHandler(this.OnDragLeave);
             // 
             // lblDropHere
             // 
@@ -74,9 +77,9 @@
             this.Controls.Add(this.textBox1);
             this.Name = "PortunusForm";
             this.Text = "Portunus";
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.OnDragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.OnDragEnter);
-            this.DragLeave += new System.EventHandler(this.OnDragLeave);
+            //this.DragDrop += new System.Windows.Forms.DragEventHandler(this.OnDragDrop);
+            //this.DragEnter += new System.Windows.Forms.DragEventHandler(this.OnDragEnter);
+            //this.DragLeave += new System.EventHandler(this.OnDragLeave);
             this.pnlDropHere.ResumeLayout(false);
             this.pnlDropHere.PerformLayout();
             this.ResumeLayout(false);
