@@ -31,7 +31,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlDropHere = new ExtendedPanel();
             this.lblDropHere = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlDropHere.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -45,6 +47,7 @@
             // pnlDropHere
             // 
             this.pnlDropHere.AllowDrop = true;
+            this.pnlDropHere.Controls.Add(this.dataGridView1);
             this.pnlDropHere.Controls.Add(this.lblDropHere);
             this.pnlDropHere.Location = new System.Drawing.Point(12, 12);
             this.pnlDropHere.Name = "pnlDropHere";
@@ -67,6 +70,14 @@
             this.lblDropHere.Text = "Drop File Here";
             this.lblDropHere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 52);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
             // PortunusForm
             // 
             this.AllowDrop = true;
@@ -77,11 +88,10 @@
             this.Controls.Add(this.textBox1);
             this.Name = "PortunusForm";
             this.Text = "Portunus";
-            //this.DragDrop += new System.Windows.Forms.DragEventHandler(this.OnDragDrop);
-            //this.DragEnter += new System.Windows.Forms.DragEventHandler(this.OnDragEnter);
-            //this.DragLeave += new System.EventHandler(this.OnDragLeave);
+            this.Load += new System.EventHandler(this.PortunusForm_Load);
             this.pnlDropHere.ResumeLayout(false);
             this.pnlDropHere.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,6 +102,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private ExtendedPanel pnlDropHere;
         private System.Windows.Forms.Label lblDropHere;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

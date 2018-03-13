@@ -50,5 +50,10 @@ namespace Portunus
         {
 
         }
+
+        private void PortunusForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
