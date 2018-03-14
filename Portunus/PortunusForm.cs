@@ -22,13 +22,16 @@ namespace Portunus
         private void OnDragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.All;
-            this.textBox1.Text = "Farts";
             this.pnlDropHere.Visible = true;
             this.AllowDrop = false;
             string[] filelist = e.Data.GetData(DataFormats.FileDrop) as string[];
             for (int i = 0; i < filelist.Length; i++)
             {
                 string path = Path.GetFileName(filelist[i]);
+                string fileExt = Path.GetExtension(filelist[i]);
+                if (fileExt != "backup" || fileExt != "key")
+                    continue;
+
             }
         }
 
@@ -41,16 +44,15 @@ namespace Portunus
 
         private void OnDragLeave(object sender, EventArgs e)
         {
-            this.textBox1.Text = "";
             this.pnlDropHere.Visible = false;
             this.AllowDrop = true;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Update_DataGrid(string name, string owner, string ver, bool IN, bool TN, bool CA, bool backup)
         {
 
         }
-
+     
         private void PortunusForm_Load(object sender, EventArgs e)
         {
 

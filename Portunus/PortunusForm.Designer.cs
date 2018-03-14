@@ -28,31 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtKeyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKeyOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKeyVersion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chkSendIN = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.chkSendTN = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.chkSendCA = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.chkBackup = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pnlDropHere = new ExtendedPanel();
             this.lblDropHere = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pnlDropHere.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlDropHere.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // dataGridView1
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.txtKeyName,
+            this.txtKeyOwner,
+            this.txtKeyVersion,
+            this.chkSendIN,
+            this.chkSendTN,
+            this.chkSendCA,
+            this.chkBackup});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 51);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(442, 163);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // txtKeyName
+            // 
+            this.txtKeyName.HeaderText = "Name";
+            this.txtKeyName.Name = "txtKeyName";
+            this.txtKeyName.Width = 60;
+            // 
+            // txtKeyOwner
+            // 
+            this.txtKeyOwner.HeaderText = "Owner";
+            this.txtKeyOwner.Name = "txtKeyOwner";
+            this.txtKeyOwner.Width = 200;
+            // 
+            // txtKeyVersion
+            // 
+            this.txtKeyVersion.HeaderText = "Ver";
+            this.txtKeyVersion.Name = "txtKeyVersion";
+            this.txtKeyVersion.Width = 30;
+            // 
+            // chkSendIN
+            // 
+            this.chkSendIN.HeaderText = "IN";
+            this.chkSendIN.Name = "chkSendIN";
+            this.chkSendIN.Width = 30;
+            // 
+            // chkSendTN
+            // 
+            this.chkSendTN.HeaderText = "TN";
+            this.chkSendTN.Name = "chkSendTN";
+            this.chkSendTN.Width = 30;
+            // 
+            // chkSendCA
+            // 
+            this.chkSendCA.HeaderText = "CA";
+            this.chkSendCA.Name = "chkSendCA";
+            this.chkSendCA.Width = 30;
+            // 
+            // chkBackup
+            // 
+            this.chkBackup.HeaderText = "Bkup";
+            this.chkBackup.Name = "chkBackup";
+            this.chkBackup.Width = 35;
             // 
             // pnlDropHere
             // 
             this.pnlDropHere.AllowDrop = true;
-            this.pnlDropHere.Controls.Add(this.dataGridView1);
             this.pnlDropHere.Controls.Add(this.lblDropHere);
             this.pnlDropHere.Location = new System.Drawing.Point(12, 12);
             this.pnlDropHere.Name = "pnlDropHere";
             this.pnlDropHere.Opacity = 70;
-            this.pnlDropHere.Size = new System.Drawing.Size(260, 238);
+            this.pnlDropHere.Size = new System.Drawing.Size(442, 238);
             this.pnlDropHere.TabIndex = 1;
             this.pnlDropHere.Visible = false;
             this.pnlDropHere.DragDrop += new System.Windows.Forms.DragEventHandler(this.OnDragDrop);
@@ -63,46 +121,44 @@
             // 
             this.lblDropHere.AllowDrop = true;
             this.lblDropHere.AutoSize = true;
-            this.lblDropHere.Location = new System.Drawing.Point(112, 105);
+            this.lblDropHere.Location = new System.Drawing.Point(173, 136);
             this.lblDropHere.Name = "lblDropHere";
             this.lblDropHere.Size = new System.Drawing.Size(75, 13);
             this.lblDropHere.TabIndex = 0;
             this.lblDropHere.Text = "Drop File Here";
             this.lblDropHere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 2;
-            // 
             // PortunusForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(466, 262);
             this.Controls.Add(this.pnlDropHere);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "PortunusForm";
             this.Text = "Portunus";
             this.Load += new System.EventHandler(this.PortunusForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlDropHere.ResumeLayout(false);
             this.pnlDropHere.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
+        
         private ExtendedPanel pnlDropHere;
         private System.Windows.Forms.Label lblDropHere;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtKeyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtKeyOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtKeyVersion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkSendCA;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkSendIN;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkSendTN;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkBackup;
     }
 }
 
