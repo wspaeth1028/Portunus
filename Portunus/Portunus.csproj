@@ -50,8 +50,8 @@
     <Compile Include="Network\Network.cs" />
     <Compile Include="Network\CSV.cs" />
     <Compile Include="Data\MoveConfig.cs" />
-    <Compile Include="PrePostProcesses\KeyCorp.cs" />
-    <Compile Include="PrePostProcesses\KeySecure.cs" />
+    <Compile Include="PrePostProcesses\AutoKey\KeyCorp.cs" />
+    <Compile Include="PrePostProcesses\AutoKey\KeySecure.cs" />
     <Compile Include="PrePostProcesses\PrePostProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
